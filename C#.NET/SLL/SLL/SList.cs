@@ -7,6 +7,7 @@ namespace SLL
 {
     class SList<T>
     {
+        int count = 0;
         Node<T> head = null;
         public void Add(Node<T> cur)
         {
@@ -24,8 +25,9 @@ namespace SLL
                 }
                 temp.next = cur;
             }
+            count++;
         }
-        public void Add(T val)
+        public void Add(T val)          //Overloaded method
         {
             Node<T> cur = new Node<T>(val);
             if (head == null)
@@ -42,6 +44,7 @@ namespace SLL
                 }
                 temp.next = cur;
             }
+            count++;
         }
         public void Display()
         {
@@ -61,6 +64,58 @@ namespace SLL
                 }
                 Console.Write(" END");
             }
+        }
+        public int Count        //Property
+        {
+            get
+            {
+                return count;
+            }
+
+        }
+        public T this[int index]        //Indexer
+        {
+            get
+            {
+                Node<T> temp;
+                temp = head;
+                if ((index >= 0) && (index < count))
+                {
+                    
+                    
+                    int i = 0;
+                    while (i < index)
+                    {
+                        temp = temp.next;
+                        i++;
+                    }
+                    return temp.data;
+                    
+                }
+                else
+                {
+                    return temp.data;
+
+                }
+            }
+        }
+        void InsertAtLast(Node<T> cur)
+        {
+        }
+        void InsertAtLast(T val)
+        {
+        }
+        void InsertAtFirst(Node<T> cur)
+        {
+        }
+        void InsertAtFist(T val)
+        {
+        }
+        void InsertAt(Node<T> cur, int pos)
+        {
+        }
+        void InsertAt(T val, int pos)
+        {
         }
     }
 }

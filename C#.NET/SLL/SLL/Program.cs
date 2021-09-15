@@ -33,6 +33,8 @@ namespace SLL
             slst.Add("like");
             slst.Add("This.");
             slst.Display();
+            Console.WriteLine("\nTotal number of node is " + slst.Count);
+            Console.WriteLine("\nFourth Element is " + slst[3].ToString());
             Console.ReadKey();
         }
     }
