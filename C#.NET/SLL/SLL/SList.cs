@@ -161,5 +161,29 @@ namespace SLL
             Node<T> cur = new Node<T>(val);
             InsertAt(cur, pos);
         }
+        public int FindFirst(T data)
+        {
+            int pos = 1;
+            Node<T> temp = head;
+            if (head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                Node<T> vamp = new Node<T>(data);
+                while (temp != null)
+                {
+                    if (EqualityComparer<T>.Default.Equals(temp.data, data))
+                    {
+                        return pos;
+                    }
+                   
+                    temp = temp.next;
+                    pos++;
+                }
+                return 0;
+            }
+        }
     }
 }
