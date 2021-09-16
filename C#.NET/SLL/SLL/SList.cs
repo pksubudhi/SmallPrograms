@@ -99,23 +99,67 @@ namespace SLL
                 }
             }
         }
-        void InsertAtLast(Node<T> cur)
+        public void InsertAtLast(Node<T> cur)
         {
+            if (head == null)
+            {
+            }
+            else
+            {
+                Node<T> temp;
+                temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = cur;
+            }
         }
-        void InsertAtLast(T val)
+        public void InsertAtLast(T val)
         {
+            Node<T> cur = new Node<T>(val);
+            InsertAtLast(cur);
         }
-        void InsertAtFirst(Node<T> cur)
+        public void InsertAtFirst(Node<T> cur)
         {
+            if (head == null)
+            {
+                head = cur;
+            }
+            else
+            {
+                cur.next = head;
+                head = cur;
+            }
         }
-        void InsertAtFist(T val)
+        public void InsertAtFirst(T val)
         {
+            Node<T> cur = new Node<T>(val);
+            InsertAtFirst(cur);
         }
-        void InsertAt(Node<T> cur, int pos)
+        public void InsertAt(Node<T> cur, int pos)
         {
+            Node<T> temp = head;
+            int i = 1;
+            while ((i < pos)&&(temp!=null))
+            {
+                temp = temp.next;
+                i++;
+            }
+            if (temp == null)
+            {
+                Console.WriteLine("Insertion Failed! The given position is far beyond number of nodes!");
+            }
+            else
+            {
+                cur.next = temp.next;
+                temp.next = cur;
+            }
         }
-        void InsertAt(T val, int pos)
+        public void InsertAt(T val, int pos)
         {
+            Node<T> cur = new Node<T>(val);
+            InsertAt(cur, pos);
         }
     }
 }
