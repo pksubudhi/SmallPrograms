@@ -35,6 +35,8 @@ namespace SLL
             slst.Display();
             slst.InsertAt("Content", 9);
             slst.Display();
+            Console.WriteLine("\nIn slst: Element is at " + slst.FindFirst("add"));
+            Console.WriteLine("\nIn lst: Element is at " + lst.FindFirst(42));
             Console.WriteLine("\nTotal number of node is " + slst.Count);
             Console.WriteLine("\nFourth Element is " + slst[3].ToString());
             Console.ReadKey();
