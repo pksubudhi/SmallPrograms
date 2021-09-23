@@ -39,6 +39,12 @@ namespace SLL
             Console.WriteLine("\nIn lst: Element is at " + lst.FindFirst(42));
             Console.WriteLine("\nTotal number of node is " + slst.Count);
             Console.WriteLine("\nFourth Element is " + slst[3].ToString());
+            slst.RemoveFirst();
+            slst.Display();
+            Console.WriteLine("\nNow Total number of node remained in slst is " + slst.Count);
+            lst.RemoveLast();
+            lst.Display();
+            Console.WriteLine("\nNow Total number of node remained in lst is " + lst.Count);
             Console.ReadKey();
         }
     }
