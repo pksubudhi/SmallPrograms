@@ -185,5 +185,43 @@ namespace SLL
                 return 0;
             }
         }
+        public int FindLast(T data)
+        {
+            return 0;
+        }
+        public void RemoveFirst()
+        {
+            if (head == null)
+            {
+            }
+            else
+            {
+                head = head.next;
+                
+            }
+        }
+        public void RemoveLast()
+        {
+            if (head == null)
+            {
+            }
+            else
+            {
+                Node<T> temp = head;
+                if (temp.next == null)
+                {
+                    head = null;
+                }
+                else
+                {
+                    temp = head;
+                    while (temp.next.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                    temp.next = null;
+                }
+            }
+        }
     }
 }
