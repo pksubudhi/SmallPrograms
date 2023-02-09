@@ -1,3 +1,8 @@
+/*
+WhatsApp: +91-8895174939
+Email: mailtopksubudhi@gmail.com
+Web: www.pksubudhi.com
+*/
 public class Bicycle extends Vehicle implements Comparable<Bicycle> {
 	private double weight;
 	static final double ACCURACY_RANGE = 0.5;
