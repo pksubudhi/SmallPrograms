@@ -1,3 +1,8 @@
+/*
+WhatsApp: +91-8895174939
+Email: mailtopksubudhi@gmail.com
+Web: www.pksubudhi.com
+*/
 public class Bus extends Car {
 	public Bus(int[] numSeatsPerRow) {
 		super(2, (2 * numSeatsPerRow.length) - 1, numSeatsPerRow);
